@@ -79,9 +79,7 @@ target/
 
 ### Django ###
 *.log
-*.pot
 *.pyc
-__pycache__/
 local_settings.py
 
 .env
@@ -89,3 +87,57 @@ db.sqlite3
 .db
 
 .idea
+
+
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# DotNet CLI artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Tye
+.tye/
+
+# .NET Core specific
+*.deps.json
+*.runtimeconfig.json
+
+# Rider/JetBrains IDEs
+.idea/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+# The packages folder can be ignored if using PackageReference
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# VS Code settings (optional, if using VS Code too)
+.vscode/
+
+# Others
+*.DS_Store
+*.stackdump
+*.pdb
+*.cache
+*.db
