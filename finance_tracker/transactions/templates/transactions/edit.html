@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Transaction</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="{{ form.amount.id_for_label }}">Amount</label>
+        {{ form.amount }}
+        {% for error in form.amount.errors %}
+        <div class="alert alert-danger mt-2">{{ error }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.date.id_for_label }}">Date</label>
+        {{ form.date }}
+        {% for error in form.date.errors %}
+        <div class="alert alert-danger mt-2">{{ error }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.type.id_for_label }}">Type</label>
+        {{ form.type }}
+        {% for error in form.type.errors %}
+        <div class="alert alert-danger mt-2">{{ error }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.category.id_for_label }}">Category</label>
+        {{ form.category }}
+        {% for error in form.category.errors %}
+        <div class="alert alert-danger mt-2">{{ error }}</div>
+        {% endfor %}
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save Changes</button>
+</form>
+{% endblock %}
